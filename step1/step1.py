@@ -17,14 +17,6 @@ subreddits = ['normmacdonald','nathanforyou','documentaries','television','world
 'southpark','reno911','funny', 'dailyshow', 'space', 'jimjefferies', 'BroadCity', 'AskReddit', 'workaholics','movies']
 
 
-#removed: ] #'sports'
-#banned:listentothis
-#-music
-#-videos
-#-sports
-#showbanned?:-funny, -music
-
-
 submission_max_age = 6 * 86400
 mylimit = None
 #'blocked', inaccessible, not.*avaiable, or your/my country
