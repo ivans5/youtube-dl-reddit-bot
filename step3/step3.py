@@ -27,8 +27,8 @@ mymessages = [
 'If you are getting "not available in your country", Replace the youtube part with "youcan,tube" in any youtube link and watch it. So for example, use this link instead: https://youcan.tube/watch?v=%s',
 'I just learned How to View YouTube Videos blocked like this: Step 1: Change the URL of the video you want to watch from "YouTube.com" to "YouCan.Tube", Step 2: Enjoy! Example: https://youcan.tube/watch?v=%s',
 'I found a link to this video that\'s not blocked, on some Canadian youtube site: https://youcan.tube/watch?v=%s',
-'Yeah, i hate it when the videos are blocked. by changing the "youtube.com" part to "youcan.tube," it should give you a working stream. so for the lazy, it is: https://youcan.tube/watch?v=%s',  #shadowbanned on: 'change "youtube.com" to "youcan.tube"'...
-'Yeah no, i hate it when the videos are blocked. by changing the "youtube.com" part to "youcan.tube," it should give you a working stream. so for the lazy, it is: https://youcan.tube/watch?v=%s',  #shadowbanned on: 'change "youtube.com" to "youcan.tube"'...
+'Yeah, i hate it when the videos are blocked. by changing the "youtube.com" part to "youcan.tube," it should give you a working stream. so for the lazy, it is: https://youcan.tube/watch?v=%s',  
+'Yeah no, i hate it when the videos are blocked. by changing the "youtube.com" part to "youcan.tube," it should give you a working stream. so for the lazy, it is: https://youcan.tube/watch?v=%s', 
 'I have the same problem. you can view it if you replace the "youtube.com" in the URL with "YouCan.tube". Eg: the URL turns into https://YouCan.Tube/watch?v=%s',
 'As a Canadian, that grinds my gears more than anything... I\'ve got some Good news for you, Buddy, you can Use "YouCan.Tube" to unblock the video: https://youcan.Tube/watch?v=%s  (all i did was replace the "youtube.com" with "youcan.tube")'
 ]
@@ -47,8 +47,6 @@ for filename in os.listdir(state_dir):
          if 'replied' not in notification:
            #2. Notify user:
            randomselection=mymessages[int(random.random()*10) % len(mymessages)] % (item['youtube_id'])
-           if 'r/funny' in notification['permalink']:  #because shadowbanned:
-             randomselection='a mirror: https://youcan.tube/watch?v=%s' % (item['youtube_id'])
            print ('%s: Will notify %s with message: %s' % (item['youtube_id'], notification['permalink'], randomselection))
            if 'comment_id' in notification:
                comment = reddit.comment(notification['comment_id'])
